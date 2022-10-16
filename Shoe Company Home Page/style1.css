@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.hoverline {
+    display:inline-block;
+}
+
+.hoverline:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #f7f8f8;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+ 
+.hoverline:hover:after { transform: scaleX(1); }
+
+#firstpara {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #212127;
+    text-align: center;
+    font-family: Noto Sans;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+}
+
+#firstheading{
+    color: white;
+    text-align: center;
+    /* font-family: sans-serif; */
+    padding-top: 20px;
+    font-family: cursive;
+    font-style: bold;
+    font-weight: 900;
+    font-size: 40px;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+#secondpara {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #212127;
+    text-align: center;
+    font-family: Noto Sans;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #06f8e4, 0 0 40px #51fd1d, 0 0 50px #f8b1d5, 0 0 60px #ff2104, 0 0 70px #f54813;
+    }
+    
+    to {
+      text-shadow: 0 0 20px rgb(17, 12, 12), 0 0 30px #252523, 0 0 40px #252424, 0 0 50px #4a4a4b, 0 0 60px #6e6e6e, 0 0 70px #474747, 0 0 80px #afafae;
+    }
+}
+
+.grid {
+    background-color: #f7f7f7;
+    width: 100%;
+}
+
+.infoofgrid {
+    width: 100%;
+    height: 35px;
+    display: flex;
+}
+
+#numproducts {
+    width: 20%;
+    padding-left: 5%;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    color: #17353D;
+}
+
+.buttonstosort {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    width: 80%;
+}
+
+.cardsofgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    /* padding-left: 5%; */
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 20px;
+}
+.shoecard {
+    background-color: white;
+    height: 300px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    /* box-shadow: 0 0 5px 0 rgb(177, 177, 177), 0 4px 16px 0 rgb(170, 170, 170); */
+    border-radius: 12px;
+    transition: transform .2s;
+}
+
+.shoecard:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    height: 60%;
+}
+
+.shoe1 {
+    padding-top: 2%;
+    width: 45%;
+    height: 85%;
+}
+
+.detail {
+    display: flex;
+    height: 40%;
+    width: 100%;
+}
+
+.rating {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+}
+
+.rate {
+    background: #ffbd71;
+    opacity: 1;
+    border-radius: 7px;
+    width: 50px;
+    height: 25px;
+}
+
+.starofshoe {
+    padding-bottom: 2px;
+}
+
+.review {
+    padding-left: 5%;
+    width: 100%;
+}
+
+.review h2 {
+    line-height: 1rem;
+    color: #f54813;
+    padding-top: 5%;
+}
+
+.review h4 {
+    padding-top: 8%;
+    padding-bottom: 1%;
+    line-height: 0.5rem;
+    font-family: Noto Sans;
+    font-style: normal;
+    color: #17353D;
+}
+
+.review p {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    color: #17353D;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .cardsofgrid { grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;}
+    
+    #numproducts {
+        width: 100%;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .cardsofgrid { grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;}
+    
+    #numproducts {
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 992px) {
+    .cardsofgrid { grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;}
+        
+        #numproducts {
+            width: 100%;
+        }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .cardsofgrid { grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;}
+        
+        #numproducts {
+            width: 100%;
+        }
+}
+
+@media only screen and (min-width: 1200px) {
+    .cardsofgrid { grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;}
+        
+        #numproducts {
+            width: 100%;
+        }
+  }  
