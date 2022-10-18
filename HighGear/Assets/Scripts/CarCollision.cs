@@ -14,7 +14,7 @@ public class CarCollision : MonoBehaviour
             movement.enabled = false;
             FindObjectOfType<GameplayController>().GameOver();
 
-            //FindObjectOfType<AudioManager>().Play("hurdleCollision");
+            FindObjectOfType<AudioManager>().Play("carCollision");
         }
     }
 }
