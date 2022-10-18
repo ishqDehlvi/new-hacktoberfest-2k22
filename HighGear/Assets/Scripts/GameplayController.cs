@@ -16,7 +16,7 @@ public class GameplayController : MonoBehaviour
             gameHasEnded = true;
             Debug.Log("Game Over!");
             Invoke("Restart", restartDelay);
-            //FindObjectOfType<AudioManager>().Play("Error");
+            FindObjectOfType<AudioManager>().Play("gameOver");
         }
     }
 
