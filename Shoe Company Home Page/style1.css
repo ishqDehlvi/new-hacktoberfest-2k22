@@ -5,18 +5,20 @@
 }
 
 .hoverline {
-    display:inline-block;
+    display: inline-block;
 }
 
 .hoverline:after {
-    display:block;
+    display: block;
     content: '';
-    border-bottom: solid 3px #f7f8f8;  
-    transform: scaleX(0);  
+    border-bottom: solid 3px #f7f8f8;
+    transform: scaleX(0);
     transition: transform 250ms ease-in-out;
 }
- 
-.hoverline:hover:after { transform: scaleX(1); }
+
+.hoverline:hover:after {
+    transform: scaleX(1);
+}
 
 #firstpara {
     margin-top: 0px;
@@ -31,7 +33,7 @@
     font-size: 20px;
 }
 
-#firstheading{
+#firstheading {
     color: white;
     text-align: center;
     /* font-family: sans-serif; */
@@ -58,11 +60,10 @@
 
 @keyframes glow {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #06f8e4, 0 0 40px #51fd1d, 0 0 50px #f8b1d5, 0 0 60px #ff2104, 0 0 70px #f54813;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #06f8e4, 0 0 40px #51fd1d, 0 0 50px #f8b1d5, 0 0 60px #ff2104, 0 0 70px #f54813;
     }
-    
     to {
-      text-shadow: 0 0 20px rgb(17, 12, 12), 0 0 30px #252523, 0 0 40px #252424, 0 0 50px #4a4a4b, 0 0 60px #6e6e6e, 0 0 70px #474747, 0 0 80px #afafae;
+        text-shadow: 0 0 20px rgb(17, 12, 12), 0 0 30px #252523, 0 0 40px #252424, 0 0 50px #4a4a4b, 0 0 60px #6e6e6e, 0 0 70px #474747, 0 0 80px #afafae;
     }
 }
 
@@ -104,6 +105,7 @@
     padding-right: 5%;
     padding-bottom: 20px;
 }
+
 .shoecard {
     background-color: white;
     height: 300px;
@@ -112,12 +114,15 @@
     /* box-shadow: 0 0 5px 0 rgb(177, 177, 177), 0 4px 16px 0 rgb(170, 170, 170); */
     border-radius: 12px;
     transition: transform .2s;
+    cursor: pointer;
 }
 
 .shoecard:hover {
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.1); 
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
 }
 
 .image {
@@ -185,49 +190,51 @@
 }
 
 @media (max-width: 768px) {
-    .cardsofgrid { grid-template-columns: repeat(1, 1fr);
-    margin: 0 auto;}
-    
+    .cardsofgrid {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+    }
     #numproducts {
         width: 100%;
     }
-    
 }
 
 @media (min-width: 768px) {
-    .cardsofgrid { grid-template-columns: repeat(1, 1fr);
-    margin: 0 auto;}
-    
+    .cardsofgrid {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+    }
     #numproducts {
         width: 100%;
     }
-    
 }
 
 @media only screen and (max-width: 992px) {
-    .cardsofgrid { grid-template-columns: repeat(1, 1fr);
-        margin: 0 auto;}
-        
-        #numproducts {
-            width: 100%;
-        }
+    .cardsofgrid {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+    }
+    #numproducts {
+        width: 100%;
+    }
 }
 
-
 @media only screen and (min-width: 992px) {
-    .cardsofgrid { grid-template-columns: repeat(2, 1fr);
-        margin: 0 auto;}
-        
-        #numproducts {
-            width: 100%;
-        }
+    .cardsofgrid {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+    }
+    #numproducts {
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
-    .cardsofgrid { grid-template-columns: repeat(3, 1fr);
-        margin: 0 auto;}
-        
-        #numproducts {
-            width: 100%;
-        }
-  }  
+    .cardsofgrid {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+    }
+    #numproducts {
+        width: 100%;
+    }
+}
