@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: joda-time:joda-time:2.10.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.10.7/e67bc8c40c1c845b4bde1f1e7035d418bf60abbc/joda-time-2.10.7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.10.7/76fcd47589947c6f263d2e3ed68a50ef7bf4c5fd/joda-time-2.10.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.10.7/bbab5e4813cb89b827279bad4de50e1e858dea29/joda-time-2.10.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
