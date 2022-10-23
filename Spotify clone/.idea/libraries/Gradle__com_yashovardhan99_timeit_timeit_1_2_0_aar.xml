@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.yashovardhan99.timeit:timeit:1.2.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/434c92fae27714cc6ce7ee29629f7d83/transformed/jetified-timeit-1.2.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/434c92fae27714cc6ce7ee29629f7d83/transformed/jetified-timeit-1.2.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/434c92fae27714cc6ce7ee29629f7d83/transformed/jetified-timeit-1.2.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yashovardhan99.timeit/timeit/1.2.0/72b870815c522a87ca3d292b2ae0bba97d5f9537/timeit-1.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yashovardhan99.timeit/timeit/1.2.0/eea47fa0684082d658454575efe9beef04694f60/timeit-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

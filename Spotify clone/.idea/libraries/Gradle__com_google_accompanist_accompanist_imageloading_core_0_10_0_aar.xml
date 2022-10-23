@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.accompanist:accompanist-imageloading-core:0.10.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c1f2bc57aa857483c19d4d22de2e28d3/transformed/jetified-accompanist-imageloading-core-0.10.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/c1f2bc57aa857483c19d4d22de2e28d3/transformed/jetified-accompanist-imageloading-core-0.10.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.accompanist/accompanist-imageloading-core/0.10.0/e44749c802da8d5edfe8f43f3a009c06a534d2b2/accompanist-imageloading-core-0.10.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.accompanist/accompanist-imageloading-core/0.10.0/54eb9137bfb4b037f39b0413a07b071a455184e5/accompanist-imageloading-core-0.10.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

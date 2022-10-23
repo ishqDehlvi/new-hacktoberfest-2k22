@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.pghazal.spotify-web-api-android:api-core:1.0.2@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0744305d02dc226930818949ca93139b/transformed/jetified-api-core-1.0.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/0744305d02dc226930818949ca93139b/transformed/jetified-api-core-1.0.2/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.pghazal.spotify-web-api-android/api-core/1.0.2/caa4d2c6f740ca7f950e7b3bb4c8d7a76b9e74bf/api-core-1.0.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.pghazal.spotify-web-api-android/api-core/1.0.2/64220bcb5eba73157ffddcb7e6c48ff816320a05/api-core-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
