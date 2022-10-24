@@ -1,0 +1,427 @@
+Loading [MathJax]/jax/output/CommonHTML/fonts/TeX/fontdata.js
+import cv2
+import matplotlib.pyplot as plt
+image = cv2.imread('C:\\Users\\Arman\\Desktop\\ACMEGRADE Arman PROJECTS\\Face recognition\\Data Set\\people1.jpg')
+display (image.shape)
+(1280, 1920, 3)
+plt.imshow(image)
+plt.show()
+
+print(image)
+[[[ 91 103 107]
+  [102 114 118]
+  [ 92 107 110]
+  ...
+  [187 192 193]
+  [186 191 192]
+  [185 190 191]]
+
+ [[ 93 105 109]
+  [ 97 109 113]
+  [ 95 110 113]
+  ...
+  [187 192 193]
+  [186 191 192]
+  [185 190 191]]
+
+ [[ 96 111 114]
+  [ 96 111 114]
+  [102 117 120]
+  ...
+  [186 191 192]
+  [185 190 191]
+  [184 189 190]]
+
+ ...
+
+ [[ 48  43  40]
+  [ 46  41  38]
+  [ 44  39  36]
+  ...
+  [251 248 244]
+  [252 247 244]
+  [251 246 243]]
+
+ [[ 55  49  44]
+  [ 53  47  42]
+  [ 49  43  38]
+  ...
+  [251 248 244]
+  [252 247 244]
+  [252 247 244]]
+
+ [[ 56  50  45]
+  [ 54  48  43]
+  [ 50  44  39]
+  ...
+  [252 249 245]
+  [253 248 245]
+  [253 248 245]]]
+cv2.imshow('', image)
+cv2.waitKey(0)
+-1
+image = cv2.resize(image, (800, 600))
+
+image.shape
+(600, 800, 3)
+cv2.imshow('',image)
+cv2.waitKey(0)
+-1
+image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+cv2.imshow('',image_gray)
+cv2.waitKey(0)
+-1
+display (image_gray.shape)
+(600, 800)
+face_detector = cv2.CascadeClassifier('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Cascades\\haarcascade_frontalface_default.xml')
+face_detector
+< cv2.CascadeClassifier 000002124B5C2770>
+detections = face_detector.detectMultiScale(image_gray)
+display (detections)
+array([[390, 323,  56,  56],
+       [387, 233,  73,  73],
+       [ 92, 239,  66,  66],
+       [677,  72,  68,  68],
+       [115, 124,  53,  53],
+       [475, 123,  59,  59]])
+display (len(detections))
+6
+x=390  
+y=323  
+w=56   
+h=56  
+cv2.rectangle(image_gray, (x, y), (x + w, y + h), (0,255,255), 1)
+cv2.imshow('', image_gray)
+cv2.waitKey(0)
+-1
+x=115  
+y=124 
+w=52  
+h=52  
+cv2.rectangle(image_gray, (x, y), (x + w, y + h), (0,255,255), 5)
+cv2.imshow('', image_gray)
+cv2.waitKey(0)
+-1
+x=475  
+y=123  
+w=59 
+h=59 
+cv2.rectangle(image_gray, (x, y), (x + w, y + h), (0,255,255), 5)
+cv2.imshow('', image_gray)
+cv2.waitKey(0)
+-1
+for (x, y, w, h) in detections:
+  cv2.rectangle(image_gray, (x, y), (x + w, y + h), (0,255,255), 5)
+cv2.imshow('', image_gray)
+cv2.waitKey(0)
+plt.show()
+image = cv2.imread('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Data Set\\people1.jpg')
+display (image.shape)
+image = cv2.resize(image, (800, 600))
+display (image.shape) 
+detections = face_detector.detectMultiScale(image)
+display (detections)
+(1280, 1920, 3)
+(600, 800, 3)
+array([[390, 323,  56,  56],
+       [677,  72,  68,  68],
+       [387, 233,  73,  73],
+       [ 92, 239,  66,  66],
+       [115, 124,  53,  53],
+       [475, 123,  59,  59]])
+for (x, y, w, h) in detections:
+  cv2.rectangle(image, (x, y), (x + w, y + h), (0,255,255), 5)
+cv2.imshow('',image)
+cv2.waitKey(0)
+plt.show()
+image = cv2.imread('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Data Set\\people1.jpg')
+image = cv2.resize(image, (800, 600)) 
+image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+detections = face_detector.detectMultiScale(image_gray, scaleFactor = 1.09)
+display (detections)
+for (x, y, w, h) in detections:
+    cv2.rectangle(image, (x, y), (x + w, y + h), (0,255,0), 5)
+cv2.imshow('',image)
+cv2.waitKey(0)
+plt.show()
+array([[678,  74,  65,  65],
+       [386, 232,  74,  74],
+       [ 90, 238,  69,  69],
+       [113, 122,  56,  56],
+       [475, 122,  60,  60]])
+image = cv2.imread('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Data Set\\people2.jpg')
+cv2.imshow('',image)
+cv2.waitKey(0)
+plt.show()
+image = cv2.imread('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Data Set\\people2.jpg')
+image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+detections = face_detector.detectMultiScale(image_gray, scaleFactor = 1.09)
+display (detections)
+for (x, y, w, h) in detections:
+    print(w, h)
+    cv2.rectangle(image, (x, y), (x + w, y + h), (0,255,0), 2)
+cv2.imshow('',image)
+cv2.waitKey(0)
+plt.show()
+array([[692, 153,  44,  44],
+       [424,  32,  46,  46],
+       [168,  35,  50,  50],
+       [324,  49,  45,  45],
+       [235,  45,  51,  51],
+       [380,  53,  54,  54],
+       [600,  61,  49,  49],
+       [907,  63,  50,  50],
+       [479,  69,  47,  47],
+       [461, 367,  33,  33],
+       [718, 101,  44,  44],
+       [663,  83,  43,  43],
+       [ 91,  81,  50,  50],
+       [825,  90,  51,  51],
+       [462, 378,  27,  27]])
+44 44
+46 46
+50 50
+45 45
+51 51
+54 54
+49 49
+50 50
+47 47
+33 33
+44 44
+43 43
+50 50
+51 51
+27 27
+image = cv2.imread('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Data Set\\people2.jpg')
+
+image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+detections = face_detector.detectMultiScale(image_gray, scaleFactor = 1.2,minNeighbors=7)
+display (detections)
+for (x, y, w, h) in detections:
+    print(w, h)
+    cv2.rectangle(image, (x, y), (x + w, y + h), (0,255,0), 2)
+cv2.imshow('',image)
+cv2.waitKey(0)
+plt.show()
+array([[424,  31,  47,  47],
+       [168,  35,  49,  49],
+       [321,  48,  47,  47],
+       [234,  46,  50,  50],
+       [380,  54,  52,  52],
+       [600,  60,  49,  49],
+       [906,  63,  51,  51],
+       [662,  83,  44,  44],
+       [480,  70,  47,  47],
+       [ 91,  81,  51,  51],
+       [825,  91,  51,  51],
+       [717, 100,  46,  46]])
+47 47
+49 49
+47 47
+50 50
+52 52
+49 49
+51 51
+44 44
+47 47
+51 51
+51 51
+46 46
+image = cv2.imread('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Data Set\\people2.jpg')
+image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+detections = face_detector.detectMultiScale(image_gray, scaleFactor = 1.2,
+                                            minNeighbors=7,minSize=(20,20), maxSize=(100,100))
+display (detections)
+for (x, y, w, h) in detections:
+    print(w, h)
+    cv2.rectangle(image, (x, y), (x + w, y + h), (0,255,0), 2)
+cv2.imshow('',image)
+cv2.waitKey(0)
+plt.show()
+array([[424,  31,  47,  47],
+       [168,  35,  49,  49],
+       [321,  48,  47,  47],
+       [234,  46,  50,  50],
+       [380,  54,  52,  52],
+       [600,  60,  49,  49],
+       [906,  63,  51,  51],
+       [662,  83,  44,  44],
+       [480,  70,  47,  47],
+       [ 91,  81,  51,  51],
+       [825,  91,  51,  51],
+       [717, 100,  46,  46]])
+47 47
+49 49
+47 47
+50 50
+52 52
+49 49
+51 51
+44 44
+47 47
+51 51
+51 51
+46 46
+eye_detector= cv2.CascadeClassifier('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Cascades\\haarcascade_eye.xml')
+
+display (eye_detector)
+< cv2.CascadeClassifier 0000021258BED990>
+image = cv2.imread('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Data Set\\people1.jpg')
+display (image.shape)
+
+image = cv2.resize(image, (1600,1000))
+print(image.shape)
+face_detections = face_detector.detectMultiScale(image, scaleFactor = 1.3, minSize = (30,30))
+for (x, y, w, h) in face_detections:
+  cv2.rectangle(image, (x, y), (x + w, y + h), (0,255,0), 2)
+
+eye_detections = eye_detector.detectMultiScale(image, scaleFactor = 1.1, minNeighbors=10, maxSize=(60,60))
+
+for (x, y, w, h) in eye_detections:
+  print(w, h)
+  cv2.rectangle(image, (x, y), (x + w, y + h), (0,0,255), 2)
+cv2.imshow('',image)
+cv2.waitKey(0)
+plt.show()
+(1280, 1920, 3)
+(1000, 1600, 3)
+33 33
+33 33
+31 31
+25 25
+22 22
+23 23
+22 22
+29 29
+30 30
+car_detector = cv2.CascadeClassifier('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Cascades\\cars.xml')
+
+display (car_detector)
+< cv2.CascadeClassifier 0000021258BEDA10>
+image = cv2.imread('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Data Set\\car.jpg')
+display (image.shape)
+cv2.imshow('',image)
+cv2.waitKey(0)
+plt.show()
+(286, 468, 3)
+image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+detections = car_detector.detectMultiScale(image_gray, scaleFactor = 1.03, minNeighbors=8)                                      
+for (x, y, w, h) in detections:
+    cv2.rectangle(image, (x, y), (x + w, y + h), (0,255,0), 2)
+cv2.imshow('',image)
+cv2.waitKey(0)
+plt.show()
+clock_detector = cv2.CascadeClassifier('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Cascades\\clocks.xml')
+display (clock_detector)
+< cv2.CascadeClassifier 0000021258BEDBD0>
+image = cv2.imread('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Data Set\\clock.jpg')
+display (image.shape)
+cv2.imshow('',image)
+cv2.waitKey(0)
+plt.show()
+(438, 450, 3)
+image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+detections = clock_detector.detectMultiScale(image_gray, scaleFactor = 1.03, minNeighbors=1)                                      
+for (x, y, w, h) in detections:
+    cv2.rectangle(image, (x, y), (x + w, y + h), (0,255,0), 2)
+cv2.imshow('',image)
+cv2.waitKey(0)
+plt.show() 
+full_detector  = cv2.CascadeClassifier('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Cascades\\fullbody.xml')
+display (full_detector)
+< cv2.CascadeClassifier 0000021258BED570>
+image = cv2.imread('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Data Set\\people3.jpg')
+display (image.shape)
+cv2.imshow('',image)
+cv2.waitKey(0)
+plt.show()
+(294, 626, 3)
+image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+detections = full_detector.detectMultiScale(image_gray, scaleFactor = 1.05, minNeighbors=5,
+                                              minSize = (50,50)) 
+for (x, y, w, h) in detections:
+    cv2.rectangle(image, (x, y), (x + w, y + h), (0,255,0), 2)
+cv2.imshow('',image)
+cv2.waitKey(0)
+plt.show()
+import dlib
+image = cv2.imread('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Data Set\\people2.jpg')
+cv2.imshow('',image)
+cv2.waitKey(0)
+-1
+face_detector_hog = dlib.get_frontal_face_detector()
+detections = face_detector_hog(image, 1)
+display (len(detections))
+display (detections)
+14
+rectangles[[(429, 38) (465, 74)], [(665, 90) (701, 126)], [(717, 103) (760, 146)], [(909, 70) (952, 113)], [(828, 98) (871, 142)], [(605, 70) (641, 106)], [(777, 62) (813, 98)], [(485, 78) (521, 114)], [(386, 60) (429, 103)], [(170, 41) (213, 84)], [(93, 89) (136, 132)], [(237, 50) (280, 94)], [(323, 50) (367, 94)], [(544, 65) (588, 108)]]
+print(detections[0])
+print(detections[0].left())
+print(detections[0].top())
+print(detections[0].right())
+print(detections[0].bottom())
+cv2.rectangle(image, (detections[0].left(), detections[0].top()), (detections[0].right(), detections[0].bottom()), (0, 255, 255), 2)
+cv2.imshow('',image)
+cv2.waitKey(0)
+[(429, 38) (465, 74)]
+429
+38
+465
+74
+-1
+for face in detections:
+  l, t, r, b = face.left(), face.top(), face.right(), face.bottom()
+  cv2.rectangle(image, (l, t), (r, b), (0, 255, 255), 2)
+cv2.imshow('',image)
+cv2.waitKey(0)
+-1
+image = cv2.imread('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Data Set\\people2.jpg')
+cv2.imshow('',image)
+cv2.waitKey(0)
+-1
+cnn_detector = dlib.cnn_face_detection_model_v1('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Weights\\mmod_human_face_detector.dat')
+cnn_detector
+<_dlib_pybind11.cnn_face_detection_model_v1 at 0x21258cc04f0>
+detections = cnn_detector(image, 1)
+for face in detections:
+  l, t, r, b, c = face.rect.left(), face.rect.top(), face.rect.right(), face.rect.bottom(), face.confidence
+  print(c)
+  cv2.rectangle(image, (l, t), (r, b), (255, 255, 0), 2)
+cv2.imshow('',image)
+cv2.waitKey(0)
+1.1440682411193848
+1.137049913406372
+1.1278996467590332
+1.1200228929519653
+1.1149370670318604
+1.1131553649902344
+1.097571611404419
+1.0942120552062988
+1.085314154624939
+1.0801892280578613
+1.0800764560699463
+1.0784764289855957
+1.0664036273956299
+1.0641793012619019
+-1
+image = cv2.imread('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Data Set\\people3.jpg')
+image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+haarcascade_detector = cv2.CascadeClassifier('C:\\Users\\MAHFOOZALAM\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Cascades\\haarcascade_frontalface_default.xml')
+detections = haarcascade_detector.detectMultiScale(image_gray, scaleFactor = 1.001, minNeighbors=5, minSize = (5,5))
+for (x, y, w, h) in detections:
+  cv2.rectangle(image, (x, y), (x + w, y + h), (0,255,0), 2)
+cv2.imshow('',image)
+cv2.waitKey(0)
+-1
+image = cv2.imread('C:\\Users\\MAHFOOZALAM\\Desktop\\ACMEGRADE MAHFOOZ ALAM PROJECTS\\Face recognition\\Data Set\\people3.jpg')
+face_detector_hog = dlib.get_frontal_face_detector()
+detections = face_detector_hog(image, 4)
+for face in detections:
+    l, t, r, b = (face.left(), face.top(), face.right(), face.bottom())
+    cv2.rectangle(image, (l, t), (r, b), (0, 255, 255), 2)
+cv2.imshow('',image)
+cv2.waitKey(0)
+-1
+ 
+ 
