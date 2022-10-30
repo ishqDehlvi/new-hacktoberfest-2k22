@@ -30,7 +30,7 @@ NOTE : FREQUENTLY ASKED QUESTIONS
 
 5. Will these templates work on iPhone, Android platforms, Tabs like kindle and Ipads?
 
-	Yes, w3layouts templates work with all Smartphones and Tablets. To, support all the devices we are providing bootstrap Responisve designs WEB Template.
+	Yes, w3layouts templates work with all Smartphones and Tablets. To, support all the devices we are providing Responisve designs WEB Template.
 
 6. What is Web Template?
 
