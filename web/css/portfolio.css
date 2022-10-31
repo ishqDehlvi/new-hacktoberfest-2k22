@@ -1,0 +1,156 @@
+.portfolio {
+  position: relative;
+  margin: 10px 10px;
+  float: left;
+  width: 248px;
+  transition-duration: 0.4s;
+  animation: winanim 0.5s;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
+}
+
+.portfolio:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+}
+
+.portfolio img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px
+}
+
+.desc {
+  padding: 10px 5px;
+  text-align: center;
+  font-size: 90%;
+  background: #fff;
+  color: #000;
+  text-transform: capitalize;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.nav {
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 3em;
+}
+
+.nav li a {
+  margin: 5px;
+  padding: 8px 34px;
+  font-size: 15px;
+  color: #1e2d3a;
+  font-weight: 600;
+  border: 1px solid #1e2d3a;
+  box-sizing: content-box;
+  transition-duration: 0.4s;
+}
+
+.nav a:hover {
+  background: #1e2d3a !important;
+  color: #fff;
+}
+
+.nav .active {
+  background-color: #1e2d3a !important;
+  border: 1px solid #1e2d3a;
+  color: #fff;
+}
+
+@keyframes winanim {
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3)
+  }
+
+  50% {
+    opacity: 1
+  }
+}
+
+/* //portfolio */
+
+@media screen and (max-width: 1080px) {
+  .portfolio {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .portfolio {
+    width: 200px;
+  }
+
+}
+
+@media screen and (max-width: 736px) {
+  .nav li a {
+    padding: 5px 28px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 736px) {
+
+  .portfolio {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .nav {
+    padding-bottom: 2em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav li a {
+    padding: 5px 24px;
+    font-size: 13px;
+  }
+
+  .portfolio {
+    width: 181px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .nav li a {
+    padding: 5px 19px;
+    font-size: 14px;
+  }
+
+  .portfolio {
+    width: 148px;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .portfolio {
+    width: 93%;
+    float: none;
+  }
+
+  .nav {
+    padding-bottom: 1.5em;
+  }
+
+  .nav li a {
+    padding: 5px 16px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .nav li a {
+    padding: 5px 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav li a {
+    padding: 3px 11px;
+  }
+}
