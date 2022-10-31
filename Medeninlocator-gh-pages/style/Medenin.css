@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+.title{
+    position: absolute;
+    z-index: 100;
+    text-transform: uppercase;
+    top: 50px;
+    left: 20px;
+    font-weight: 550;
+    font-size: 10vh;
+}
+
+.search-container {
+    position: absolute;
+    z-index: 100;
+    top: 200px;
+    left: 10px;
+    border-radius: 30px;
+    max-width: 350px;
+    max-height: 60px;
+    background-color: #0a0a0a;
+    display: flex;
+    width: 25vmax;
+    height: 10vw;
+}
+
+.search-container .search-box {
+    flex-grow: 1;
+display: flex;
+align-items: center;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+#zip-code {
+background-color: transparent;
+width: 100%;
+font-size: 25px;
+color: white;
+border: none;
+}
+
+.search-box input:focus{
+    outline:none ;
+}
+
+.fa-search{
+    color: white;
+    font-size: 25px;
+    transform: rotate(100deg);
+    cursor: pointer;
+}
+
+.store-list-container {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    max-width: 350px;
+    max-height: 400px;
+    top: 50vh;
+    left: 10px;
+    background-color: #fff4d4;
+    border-radius: 30px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    width: 32vw;
+    height: 50vmax;
+}
+
+.store-list {
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    width: 25vmax;
+    left: 10px;
+}
+
+.stores-name{
+font-family: Average Sans;
+font-style: normal;
+font-weight: 400;
+font-size: 3vh;
+line-height: normal;
+color: rgb(24, 22, 22);
+text-transform: uppercase;
+cursor: pointer;
+}
+
+.stores-address {
+font-family: Average Sans;
+font-style: normal;
+font-weight: 350;
+font-size: 1.8vw;
+line-height: 2.5vw;
+color: rgb(53, 50, 50);
+letter-spacing: 0.05rem;
+text-transform: none;
+width: 25vw;
+}
+
+.store-container-background{
+  display: flex;
+  flex-grow: 1;
+  transition: all 0.2s ease-in-out;
+}
+.store-container-background:hover {
+  background-color: #ccc;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  margin-left: 20px;
+}
+
+.dot1 {
+    height: 2vw;
+    width: 2vw;
+    background-color: #827878;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 1%;
+    text-align: center;
+    color: #fff4d4;
+    margin-inline-start: 1vw;
+    font-size: 2vw;
+  }
+
+hr{
+    overflow: visible; /* For IE */
+    height: 5vh;
+    border-style: solid;
+    border-color: rgb(83, 81, 81);
+    border-width: 1px 0 0 0;
+    border-radius: 10px;
+    display: block;
+    content: "";
+    margin-top: -2vw;
+    border-width: 0 0 1px 0;
+    width: 25vw;
+}
+
+/*Scrollbar*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #827878; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#827878; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: white;
+  }
+
+  .store-info-window{
+    width: 30.5vh;
+    height: 25.5vh;
+    font-size: 3.2vh;
+    padding: 0.5vw;
+    background-color: #fff4d4;
+  }
+
+  .store-info-name{
+    font-size: 3.8vh;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .store-info-address, .store-info-phone{
+    margin-top: 1vw;
+    display: flex;
+    align-items: center;
+    font-size: 3vh;
+  }
+
+  .circle{
+    width: 6vh;
+    height: 6vh;
+    background-color: #1985A1;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3px;
+  }
+
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#footer {
+  /*padding: 5em 4em 2em;*/
+  z-index: 1;
+  position: fixed;
+  left: 50vw;
+  bottom: 0;
+  color: rgba(6, 128, 216, 0.993);
+}
+
+#footer #logo {
+	background-color: rgba(45, 164, 248, 0.918);
+	border-radius: 50%;
+	color: #fff;
+	padding: .4em;
+	font-family: "Maven pro", sans-serif;
+	font-size: 3.3vh;
+	font-weight: 500;
+	display: inline;
+}
